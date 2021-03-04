@@ -4,6 +4,7 @@ This repository contains the most important take-aways from w3schools' CSS tutor
 > Source: https://www.w3schools.com/css/default.asp
 
 Table of contents<a name="#homepage">
+
 [CSS Tutorial](#css-tutorial)
 [CSS HOME](#css-tutorial)
 [CSS Introduction](#css-introduction)
@@ -94,6 +95,7 @@ Table of contents<a name="#homepage">
 [Grid Item](#grid-item)
 
 [CSS References](#css-references)
+
 - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - --  - - -- - - - - - -- - - - - - - - - - - -- - - - - - -- -- - --  -- - - -- - - - - -- - - - - - - -- 
 
 

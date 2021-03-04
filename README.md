@@ -13,7 +13,7 @@ Table of contents<a name="#homepage">
 [CSS Comments](#css-comments)
 [CSS Colors](#css-colors)
 [CSS Backgrounds](#css-backgrounds)
-[CSS Borders]((#css-borders)
+[CSS Borders](#css-borders)
 [CSS Margins](#css-margins)
 [CSS Padding](#css-padding)
 [CSS Height or Width](#css-height-or-width)

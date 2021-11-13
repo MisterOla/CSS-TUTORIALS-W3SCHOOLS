@@ -98,7 +98,7 @@ CSS Tutorial<a name="Homepage"></a>
 
 - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - --  - - -- - - - - - -- - - - - - - - - - - -- - - - - - -- -- - --  -- - - -- - - - - -- - - 
 
-* ## CSS HOME
+## CSS HOME
 
 
 CSS dictates how HTML Should be displayed
@@ -134,7 +134,7 @@ p {
   
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - -- - - - - - -- - - -- - -- - --- - -- - - -- -- - - - - - - -- - - - -- 
 
-CSS INTRODUCTION:::
+## CSS INTRODUCTION
 
 
 CSS Solved a Big problem:

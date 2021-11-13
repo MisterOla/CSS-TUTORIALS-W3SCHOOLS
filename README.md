@@ -435,7 +435,7 @@ saved with a .css extension and the file must not contain any HTML tags.
 
 when "mystyle.css" contains the code:
 
-  ```
+```
 body {
   background-color: lightblue;
 }
@@ -444,11 +444,13 @@ h1 {
   color: navy;
   margin-left: 20px;
 }
-
+  
+```
 
 
 The mystyle can be inherited below:
-
+  
+```
 <!DOCTYPE html>
 <html>
 <head>
@@ -461,19 +463,18 @@ The mystyle can be inherited below:
 
 </body>
 </html>
-
+```
 
 NB: No space between property value and it's unit. I.e use: 20px not 20 px
 
 
-
-
 Internal CSS::
 
-Can be used if one single HTML page has a unique style. You should define inside the <style> element, inside 
+Can be used if one single HTML page has a unique style. You should define inside the ```<style>``` element, inside 
 
-the <head> section. Example of internal CSS is shown below:
+the ```<head>``` section. Example of internal CSS is shown below:
 
+```
 !DOCTYPE html>
 <html>
 <head>
@@ -495,7 +496,7 @@ h1 {
 
 </body>
 </html>
-
+```
 
 
 Inline CSS::
@@ -504,7 +505,7 @@ You can use an inline style to apply unique style to just a single element. To u
 
 style attribute to the appropriate element. Style attribute can contain any of the CSS properties.
 
-
+```
 <!DOCTYPE html>
 <html>
 <body>
@@ -514,7 +515,7 @@ style attribute to the appropriate element. Style attribute can contain any of t
 
 </body>
 </html>
-
+```
 
 NB: And inline style denies you the benefits of a style sheet since you now have to edit the styling of 
 
@@ -531,6 +532,7 @@ is applied to the element.
 
 if mystyle.css contains:
 
+```
 h1 {
   color: navy;
 }
@@ -541,13 +543,13 @@ and internal style sheet contains the following:
 h1 {
   color: orange;   
 }
+```
 
-
-Case A: Internal style defined after the link to external style sheet, <h1> elements will take an orange 
+Case A: Internal style defined after the link to external style sheet,```<h1>``` elements will take an orange 
 
 color since the internal style comes last
 
-
+```
 <!DOCTYPE html>
 <html>
 <head>
@@ -565,12 +567,13 @@ h1 {
 
 </body>
 </html>
+```
 
-
-Case B: If the internal style is defined before the link the external style sheet, then the <h1> elements 
+Case B: If the internal style is defined before the link the external style sheet, then the ```<h1>``` elements 
 
 will take the navy color defined in the style sheet. 
 
+```
 <!DOCTYPE html>
 <html>
 <head>
@@ -588,7 +591,7 @@ h1 {
 
 </body>
 </html>
-
+```
 
 
 Cascading Order::
@@ -606,21 +609,23 @@ style sheet according to the rules below 1. has highest priority and 3. has the 
 Inline style is highest priority and can override external styles and browser defaults.
 
 
+  <kbd>return</kbd>[Back to table of contents](#homepage)
+  
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - -- - - - - - -- - - -- - -- - --- - -- - - -- -- - - - - - - -- - - - -- 
 
 
+## CSS COMMENTS
 
-
-CSS COMMENTS
-
+  
 
 They do not show in the browser but improve code readability:
 
 
 They may help you edit the source code later on. The comment is placed inside <style> element, starts with 
 
-/* and ends with */   and you can have the comment anywhere in the code you like.
+```/* and ends with */```   and you can have the comment anywhere in the code you like.
 
-
+```
  /* This is a single-line comment */
 p {
   color: red;
@@ -635,14 +640,13 @@ comment */
 p {
   color: red;
 } 
-
-
+```
 
 HTML and CSS Comments
 
-The HTML comment is: <!--this is a comment--!>. You can combine HTML style with a CSS for an element:
+The HTML comment is: ```<!--this is a comment--!>```. You can combine HTML style with a CSS for an element:
 
-
+```
 <!DOCTYPE html>
 <html>
 <head>
@@ -663,12 +667,10 @@ p {
 
 </body>
 </html>
+```
 
 
-
-
-
-CSS COLORS
+## CSS COLORS
 
 
 Colors:: 
@@ -681,23 +683,24 @@ CSS Color names: There are 140 supported standard color names. See the link belo
 
 
 CSS Background Color: Set the background color as shown below
-
+  
+```
 <h1 style="background-color:DodgerBlue;">Hello World</h1>
 
 <p style="background-color:Tomato;">
-
+```
 
 CSS Text Color: You can also set the color of the text as shown below:
 
-
+```
 <h1 style="color:Tomato;">Hello World</h1>
 <p style="color:DodgerBlue;">Lorem ipsum...</p>
 <p style="color:MediumSeaGreen;">Ut wisi enim...</p> 
-
+```
 
 CSS Border Color: Use can use this to change the color of the border (the box around a text). The
 
-
+```
 <body>
 
 <h1 style="border: 2px solid Tomato;">Hello World</h1>
@@ -707,7 +710,7 @@ CSS Border Color: Use can use this to change the color of the border (the box ar
 <h1 style="border: 2px solid Violet;">Hello World</h1>
 
 </body>
-
+```
 
 CSS Color values
 
@@ -717,23 +720,23 @@ You can specify color using RGB values, HEX values, HSL values, and RGBA values,
 
 The three below are still tomato colors
 
-
+```
 rgb(255, 99, 71)
 #ff6347
 hsl(9, 100%, 64%)
-
+```
 
 
 
 The below are tomato with 50% transparency:
 
-
+```
 rgba(255, 99, 71, 0.5)
 hsla(9, 100%, 64%, 0.5)
-
+```
 
 See the application below:
-
+```
 <!DOCTYPE html>
 <html>
 <body>
@@ -754,7 +757,7 @@ transparent colors using RGBA or HSLA color values.</p>
 
 </body>
 </html>
-
+```
 
 
 
@@ -762,28 +765,24 @@ CSS RGB::
 
 RGB Value: RGB rep red, green, and blue light sources
 
-
+```
 format: rgb(red_value,green_value,blue_value)
 
-
+```
 Each of the color values range from 0 to 255
 
+```red= rgb(255,0,0);``` since red color is max while blue and green are absent.
 
-red= rgb(255,0,0); since red color is max while blue and green are absent.
 
+```black=rgb(0,0,0);``` since there is absence of light
 
-black=rgb(0,0,0); since there is absence of light
+```white=rgb(255,255,255);``` since there is an excess of all the lights...no color shows
 
-white=rgb(255,255,255); since there is an excess of all the lights...no color shows
-
-grey=rgb(x,x,x); equal color values produce grey. So, you have black at rgb(0,0,0), and white at rgb
-
-(255,255,255).Every other equal mix between 0 and 255 is grey but to different extent. The closer the equal 
+```grey=rgb(x,x,x);``` equal color values produce grey. So, you have black at ```rgb(0,0,0)```, and white at ```rgb(255,255,255)```.Every other equal mix between 0 and 255 is grey but to different extent. The closer the equal 
 
 values are to zero the darker the grey color is. 
 
-
-
+  
 RGBA Value: It includes alpha channel ( a measure of opacity) for each of the colors. 
 
 format: rgba(red_value,green_value,blue_value,alpha)

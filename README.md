@@ -5,8 +5,7 @@ This repository contains the most important take-aways from w3schools' CSS tutor
 
 Table of contents<a name="#homepage">
 
-[CSS Tutorial](#css-tutorial)
-[CSS HOME](#css-tutorial)
+* [CSS HOME](#css-home)
 [CSS Introduction](#css-introduction)
 [CSS Syntax](#css-syntax)
 [CSS Selectors](#css-selectors)
@@ -98,9 +97,7 @@ Table of contents<a name="#homepage">
 
 - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - --  - - -- - - - - - -- - - - - - - - - - - -- - - - - - -- -- - --  -- - - -- - - - - -- - - 
 
-css Tutorial
-
-CSS HOME:::
+* ## CSS HOME
 
 
 CSS dictates how HTML Should be displayed
@@ -115,8 +112,9 @@ CSS is used to define styles for your web pages, including the design, layout an
 
 different devices and screen sizes.
 
-An example of a simple CSS is shown below
+An example of a simple CSS is shown below:
 
+```  
 body {
   background-color: lightblue;
 }
@@ -130,7 +128,10 @@ p {
   font-family: verdana;
   font-size: 20px;
 }
-
+```
+<kbd>return</kbd>[Back to table of contents](#homepage)
+  
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - -- - - - - - -- - - -- - -- - --- - -- - - -- -- - - - - - - -- - - - -- 
 
 CSS INTRODUCTION:::
 

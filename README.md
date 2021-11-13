@@ -9,7 +9,7 @@ CSS Tutorial<a name="Homepage"></a>
 * [CSS Introduction](#css-introduction)
 * [CSS Syntax](#css-syntax)
 * [CSS Selectors](#css-selectors)
-* [CSS How To](#css-how-to)
+* [CSS How To](#css-how-to-add-css)
 * [CSS Comments](#css-comments)
 * [CSS Colors](#css-colors)
 * [CSS Backgrounds](#css-backgrounds)
@@ -142,10 +142,12 @@ HTML was NEVER intended to contain tags for formatting a web page!
 
 HTML was created to describe the content of a web page, like:
 
+```
 <h1>This is a heading</h1>
 
 <p>This is a paragraph.</p>
-
+```
+  
 Adding fonts color to HTML elements which was introduced in html 3 was a deviation from what HTML was meant 
 
 to do in the first place.
@@ -157,14 +159,21 @@ The style definitions are normally saved in external .css files.
 With an external stylesheet file, you can change the look of an entire website by changing just one file!
 
 
-CSS SYNTAX:::
+<kbd>return</kbd>[Back to table of contents](#homepage)
+  
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - -- - - - - - -- - - -- - -- - --- - -- - - -- -- - - - - - - -- - - - -- 
 
+
+## CSS SYNTAX
+
+```
 h1 {color:blue;font-size:12px;}
 
 selector {property:value;property:value;} 
-
+```
 property+value=declaration block.
 
+  
 ```
 p {
   color: red;
@@ -176,9 +185,13 @@ p {
 the p is set to red and centered automatically.
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+  
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - -- - - - - - -- - - -- - -- - --- - -- - - -- -- - - - - - - -- - - - -- 
 
 
-CSS Selectors:::
+
+## CSS SELECTORS
 
 They help in dictating the styles of specific html elements
 
@@ -370,7 +383,8 @@ p {
 }
 ```
 
-we can simply have:
+We can simply have:
+
 ```
 
 h1, h2, p {
@@ -385,6 +399,8 @@ and still get the same result
 Summary of all CSS selectors:
 
 All CSS Simple Selectors
+  
+```
 Selector 	Example 	Example description
 
 #id 	#firstname 	Selects the element with id="firstname"
@@ -393,11 +409,15 @@ element.class 	p.intro 	Selects only <p> elements with class="intro"
 * 	* 	Selects all elements
 element 	p 	Selects all <p> elements
 element,element,.. 	div, p 	Selects all <div> elements and all <p> elements
+```
 
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+  
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - -- - - - - - -- - - -- - -- - --- - -- - - -- -- - - - - - - -- - - - -- 
 
-HOW TO ADD CSS
+## CSS HOW TO ADD CSS
 
 Browser formats html using the information in the style sheet or <style>
 
@@ -415,6 +435,7 @@ saved with a .css extension and the file must not contain any HTML tags.
 
 when "mystyle.css" contains the code:
 
+  ```
 body {
   background-color: lightblue;
 }

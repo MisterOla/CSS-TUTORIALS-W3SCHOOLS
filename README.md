@@ -4,8 +4,8 @@ This repository contains the most important take-aways from w3schools' CSS tutor
 > Source: https://www.w3schools.com/css/default.asp
 
 Table of contents<a name="#homepage">
-
-* [CSS HOME](#css-home)
+* CSS Tutorial<a name="Homepage"></a>
+[CSS HOME](#css-home)
 [CSS Introduction](#css-introduction)
 [CSS Syntax](#css-syntax)
 [CSS Selectors](#css-selectors)

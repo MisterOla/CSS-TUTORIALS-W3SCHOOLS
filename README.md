@@ -330,7 +330,7 @@ p.large {
 ```
 
 
-The CSS Universal Selector::
+The CSS Universal Selector
 
 The * selects all the HTML elements on a page
 
@@ -668,7 +668,8 @@ p {
 </body>
 </html>
 ```
-
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 ## CSS COLORS
 
@@ -876,10 +877,11 @@ HsLA Value::: They are an extension of the HSL color values by including an alph
 hsla(hue, saturation, lightness, alpha)
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-
-CSS BACKGROUNDS
+## CSS BACKGROUNDS
 
 They are used to add background effects for elements
 
@@ -1392,9 +1394,10 @@ background-position 	Sets the starting position of a background image
 background-repeat 	Sets how a background image will be repeated
 background-size 	Specifies the size of the background image(s)
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-CSS Borders
+## CSS Borders
 
 CSS Border Style
 
@@ -2160,10 +2163,11 @@ border-top-style 	Sets the style of the top border
 border-top-width 	Sets the width of the top border
 border-width 	Sets the width of the four borders
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-
-CSS Margins
+## CSS Margins
 
 To create space around an element outside of specified borders. the 'margin' gives control over the margin 
 
@@ -2509,10 +2513,11 @@ margin-left 	Sets the left margin of an element
 margin-right 	Sets the right margin of an element
 margin-top 	Sets the top margin of an element
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
-
-CSS Padding
+## CSS Padding
 
 CSS 'padding' is used to create spaces outside an element inside any specified borders. To use css padding, 
 
@@ -2961,11 +2966,10 @@ padding-left 	Sets the left padding of an element
 padding-right 	Sets the right padding of an element
 padding-top 	Sets the top padding of an element
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- -  - - - - - - 
 
-
-
-
-CSS Height and Width
+## CSS Height and Width
 
 
 The CSS 'height' and 'width' properties are used to set the height and width of an element.
@@ -3273,11 +3277,10 @@ min-height 	Sets the minimum height of an element
 min-width 	Sets the minimum width of an element
 width 	Sets the width of an element
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-
-
-
-CSS Box Model
+## CSS Box Model
 
 All html elements can be considered to be boxes. The box model wraps around every HTML element and consists 
 
@@ -3391,11 +3394,12 @@ Total element height = height + top padding + bottom padding + top border + bott
 
 bottom margin
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - -  - - - - - - - - - - - - -  - - - - - -  - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - -
 
 
 
-
-CSS Outline
+## CSS Outline
 
 
 Outline::
@@ -3898,10 +3902,10 @@ outline-style 	Sets the style of an outline
 outline-width 	Sets the width of an outline
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-
-CSS Text
+## CSS Text
 
 We explain properties used in formatting texts in CSS under this section and subsections that follow.
 
@@ -4581,9 +4585,10 @@ h1 {
 </html>
 
 
-
-
-CSS Fonts
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+## CSS Fonts
 
 
 The right fond can improve UX of a website and can create a unique and strong brand identity. Readability of 
@@ -6408,10 +6413,11 @@ Note: The font-size and font-family values are required. If one of the other val
 
 default value are used.
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - -  - - - - - - - - - - - - - - - - - -- - - - - - -- - - -
 
 
-
-CSS Icons
+## CSS Icons
 
 There is an icon library in CSS that facilitates the addition of icons to an HTML page. 
 
@@ -6559,9 +6565,10 @@ See the example of the implementation of google icon below:
 </html>
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+ - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  -
 
-
-CSS Links
+## CSS Links
 
 
 There are multiple ways of styling links using CSS and with the aid of CSS color, font-family, and 

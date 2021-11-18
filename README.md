@@ -6866,12 +6866,13 @@ Different types of cursors that can be used for links
 </body>
 </html>
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --  --  - - -
 
 
 
 
-
-CSS Lists
+## CSS Lists
 
 HTML Lists and CSS List properties
 
@@ -7436,11 +7437,12 @@ ol.v {list-style-type: inherit;}
 </body>
 </html>
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
 
-
-CSS Tables
+## CSS Tables
 
 CSS helps to improve the appearance of HTML tables
 
@@ -8623,10 +8625,11 @@ caption {
 </body>
 </html>
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-
-CSS Display
+## CSS Display
 
 CSS Layout - The display Property
 
@@ -8896,8 +8899,10 @@ Property 	Description
 display 	Specifies how an element should be displayed
 visibility 	Specifies whether or not an element should be visible
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-CSS Layout - width and max-width
+## CSS Max Width
 
 Using width, max-width and margin: auto;
 
@@ -8952,10 +8957,11 @@ the two divs!</p>
 
  
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - -  - - - - - 
 
 
-
-CSS Position
+## CSS Position
 
 CSS Layout - The position Property
 
@@ -9480,7 +9486,7 @@ z-index 	Sets the stack order of an element
 NB: position, left:-20px; means that the element is moved 20px left away from its normal position. 
 
 
-
+## CSS Overflow
 CSS Layout - Overflow
 
 States what happens if text exceed the space provided for it to occcupy.
@@ -9748,9 +9754,10 @@ overflow-y 	Specifies what to do with the top/bottom edges of the content if it 
 
 content area
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - -  - - -
 
-
-
+## CSS Float
 CSS Layout - float and clear
 
 CSS float property specifies how an element should float
@@ -10797,10 +10804,11 @@ overflow-y 	Specifies what to do with the top/bottom edges of the content if it 
 
 content area
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - -  - - - - - - - - - - - - - - - - - - - -- - - - - - - - - -  - - -
 
 
-
-CSS Inline-block
+## CSS Inline-block
 
 CSS Layout - display: inline-block;
 
@@ -10924,10 +10932,10 @@ crowded.</p>
 </body>
 </html>
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - 
 
-
-
-CSS Align
+#CSS Align
 
 Center Align Elements;
 
@@ -11347,9 +11355,9 @@ align the item(s) in the center (in both axis).</p>
 </body>
 </html>
 
-
-
-CSS Combinators
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+## CSS Combinators
 
 The relationship between the selectors in an HTML page is explained by combinators.
 

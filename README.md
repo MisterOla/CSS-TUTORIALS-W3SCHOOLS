@@ -2967,7 +2967,7 @@ padding-right 	Sets the right padding of an element
 padding-top 	Sets the top padding of an element
 
 <kbd>return</kbd>[Back to table of contents](#homepage)
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- -  - - - - - - 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 ## CSS Height and Width
 
@@ -9483,7 +9483,163 @@ top 	Sets the top margin edge for a positioned box
 z-index 	Sets the stack order of an element
 
 
-NB: position, left:-20px; means that the element is moved 20px left away from its normal position. 
+NB: position, left:-20px; means that the element is moved 20px left away from its normal position.
+      
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
+## CSS Z-index
+CSS Layout - The z-index Property
+
+The z-index Property
+
+When elements are positioned, they can overlap other elements.
+
+The z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others). See the illustration of CSS z-index below:
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+</style>
+</head>
+<body>
+
+<h1>This is a heading</h1>
+<img src="w3css.gif" width="100" height="140">
+<p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+
+</body>
+</html>
+
+Note: z-index only works on positioned elements (position: absolute, position: relative, position: fixed, or position: sticky) and flex items (elements that are direct children of display: flex elements).   
+      
+Another z-index Example
+Example
+
+Here we see that an element with greater stack order is always above an element with a lower stack order:
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  position: relative;
+}
+
+.black-box {
+  position: relative;
+  z-index: 1;
+  border: 2px solid black;
+  height: 100px;
+  margin: 30px;
+}
+
+.gray-box {
+  position: absolute;
+  z-index: 3; /* gray box will be above both green and black box */
+  background: lightgray;
+  height: 60px;  
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
+
+.green-box {
+  position: absolute;
+  z-index: 2; /* green box will be above black box */
+  background: lightgreen;
+  width: 35%;
+  left: 270px;
+  top: -15px;
+  height: 100px;
+}
+</style>
+</head>
+<body>
+
+<h1>Z-index Example</h1>
+
+<p>An element with greater stack order is always above an element with a lower stack order.</p>
+
+<div class="container">
+  <div class="black-box">Black box (z-index: 1)</div>
+  <div class="gray-box">Gray box (z-index: 3)</div>
+  <div class="green-box">Green box (z-index: 2)</div>
+</div>
+
+</body>
+</html>
+
+Without z-index
+
+If two positioned elements overlap each other without a z-index specified, the element defined last in the HTML code will be shown on top.
+Example
+
+Same example as above, but here with no z-index specified:
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  position: relative;
+}
+
+.black-box {
+  position: relative;
+  border: 2px solid black;
+  height: 100px;
+  margin: 30px;
+}
+
+.gray-box {
+  position: absolute;
+  background: lightgray;
+  height: 60px;  
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
+
+.green-box {
+  position: absolute;
+  background: lightgreen;
+  width: 35%;
+  left: 270px;
+  top: -15px;
+  height: 100px;
+}
+</style>
+</head>
+<body>
+
+<h1>Overlapping elements</h1>
+
+<p>If two positioned elements overlap each other without a z-index specified,
+the element defined last in the HTML code will be shown on top:</p>
+
+<div class="container">
+  <div class="black-box">Black box</div>
+  <div class="gray-box">Gray box</div>
+  <div class="green-box">Green box</div>
+</div>
+
+</body>
+</html>
+
+CSS Property
+Property 	Description
+z-index 	Sets the stack order of an element
+      
+      
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
 ## CSS Overflow
@@ -10800,9 +10956,7 @@ overflow 	Specifies what happens if content overflows an element's box
 overflow-x 	Specifies what to do with the left/right edges of the content if it overflows the element's 
 
 content area
-overflow-y 	Specifies what to do with the top/bottom edges of the content if it overflows the element's 
-
-content area
+overflow-y 	Specifies what to do with the top/bottom edges of the content if it overflows the element's content area
 
 <kbd>return</kbd>[Back to table of contents](#homepage)
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - -  - - - - - - - - - - - - - - - - - - - -- - - - - - - - - -  - - -
@@ -11549,8 +11703,10 @@ element+element 	div + p 	Selects the first <p> element that are placed immediat
 element1~element2 	p ~ ul 	Selects every <ul> element that are preceded by a <p> element
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-CSS Pseudo-classes
+## CSS Pseudo-class
 
 A pseudo-class is used to define a special state of an element. For instance, you can use psedo-class to 
 
@@ -11967,10 +12123,11 @@ Selector 	Example 	Example description
 ::first-line 	p::first-line 	Selects the first line of every <p> element
 ::selection 	p::selection 	Selects the portion of an element that is selected by a user
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-
-CSS Pseudo-elements;
+## CSS Pseudo-element
 
 A CSS pseudo-element is used to style specific parts of an element such as: 
 Styling the first letter, or line of an element; or 
@@ -12327,11 +12484,12 @@ anchor name)
 :visited 	a:visited 	Selects all visited links
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
 
-
-CSS Opacity
+## CSS Opacity
 
 
 The opacity property quantifies the opacity or trasparency of an element.\
@@ -12557,9 +12715,10 @@ div.transbox p {
 </html>
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-CSS Navigation Bar
+## CSS Navigation Bar
 
 Navigation bars::
 
@@ -13958,12 +14117,11 @@ li.dropdown {
 </body>
 </html>
 
+  
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-
-
-
-CSS Dropdowns;
+ ## CSS Dropdowns
 
 This section shows how to add hoverable dropdown with CSS:
 
@@ -14341,11 +14499,10 @@ li.dropdown {
 </html>
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-
-
-CSS Image Gallery;
+## CSS Image Gallery
 
 
 You can create an image gallery with CSS as illustrated below:
@@ -14526,9 +14683,10 @@ images side by side. For screens smaller than 500px, the images will stack verti
 </body>
 </html>
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-CSS Image Sprites
+## CSS Image Sprites
 
 
 An image sprite is a collection of images put into a single image to reduce the number of server requests, 
@@ -14756,10 +14914,13 @@ Explanation of the example above:
 specify the same background position, only 45px further down
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-
-CSS Attribute Selectors;
+## CSS Attr Selectors
+  
+CSS Attribute Selectors
 
 
 Style HTML Elements With Specific Attributes
@@ -15059,10 +15220,11 @@ with ".pdf"
 
 contains the substring "w3schools"
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-
-CSS Forms
+## CSS Forms
 
 CSS can enhance the looks of an HTML form. 
 
@@ -15726,10 +15888,11 @@ columns stack on top of each other instead of next to each other.</p>
 </html>
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-
-CSS Counters
+## CSS Counters
 
 
 They are CSS-maintained variables whose values can be incremental by CSS rules (to track the number of times 
@@ -15967,11 +16130,10 @@ counter-reset 	Creates or resets one or more counters
 counter() 	Returns the current value of the named counter
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-
-
-CSS Website Layout
+## CSS Website Layout
 
 Website Layout
 
@@ -16686,9 +16848,11 @@ exercitation ullamco.</p>
 </html>
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-CSS Units
+## CSS Units
 
 
 
@@ -16942,10 +17106,11 @@ The universal selector and inherited values have a specificity of 0 - *, body * 
 specificity. Inherited values also have a specificity of 0.
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-
-CSS The !important Rule
+## CSS The !important Rule
 
 The !important rule in CSS is used to add more importance to a property/value than normal.
 
@@ -17151,10 +17316,11 @@ font):
 
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-
-CSS Math Functions
+## CSS Math Functions
 
 The CSS math functions allow mathematical expressions to be used as property values. Here, we will explain 
 
@@ -17278,15 +17444,13 @@ Let us look at an example:
 
 
 
-
-
-CSS ADVANCED
+- - - - - - - - - - - - - - - - - - - - - - - - - - -- - - - - - --  - - - --- - - - - - - - -- - - - - - - - - - - - - -- -- - - -- - - - 
+ 
+                                                              ## CSS ADVANCED 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
  
 
-
-
-
-css Rounded Corners;
+## CSS Rounded Corners
 
 This enables you to give any element a rounded corner. 
 
@@ -17495,9 +17659,10 @@ border-bottom-right-radius 	Defines the shape of the border of the bottom-right 
 border-bottom-left-radius 	Defines the shape of the border of the bottom-left corner
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-CSS Border Images;
+## CSS Border Images
 
 The CSS border-image property allows you to set the image to be used as the border around an element. 
 
@@ -17646,12 +17811,12 @@ border-image-width 	Specifies the widths of the border image
 border-image-outset 	Specifies the amount by which the border image area extends beyond the border box
 border-image-repeat 	Specifies whether the border image should be repeated, rounded or stretched
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
+#CSS Backgrounds
 
 CSS Multiple Backgrounds
-
-
-
 
 In this chapter you will learn how to add multiple background images to one element.
 
@@ -18086,6 +18251,7 @@ ex ea commodo consequat.</p>
 </body>
 </html>
 
+  
 
 CSS background-clip Property
 
@@ -18167,8 +18333,11 @@ background-origin 	Specifies where the background image(s) is/are positioned
 background-size 	Specifies the size of the background image(s)
 
 
-
-CSS Colors
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   
+  
+ 
+## CSS Colors
 
 
 RGBA Colors
@@ -18334,12 +18503,10 @@ The texts above will also be transparent. See example below for elements with sp
 </html>
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-
-
-
-CSS Color Keywords
+## CSS Color Keywords
 
 In this section, transparent, currentcolor, and inherit keywords will be explained.
 
@@ -18541,10 +18708,11 @@ inherited from the parent element.</div>
 </html>
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-
-CSS Gradients
+## CSS Gradients
 
 
 The CSS gradients enable you to display smooth transitions between two of many specified colors. The three 
@@ -19403,12 +19571,10 @@ repeating-linear-gradient() 	Repeats a linear gradient
 repeating-radial-gradient() 	Repeats a radial gradient
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-
-
-
-CSS Shadow Effects
+## CSS Shadows
 
 CSS Shadow Effects
 
@@ -19765,11 +19931,10 @@ box-shadow 	Adds one or more shadows to an element
 text-shadow 	Adds one or more shadows to a text 
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-
-
-CSS Text Effects
+## CSS Text Effects
 
 CSS Text Overflow, Word Wrap, Line Breaking Rules, and Writing Modes
 
@@ -19988,12 +20153,13 @@ text-overflow 	Specifies how overflowed content that is not displayed should be 
 word-break 	Specifies line breaking rules for non-CJK scripts
 word-wrap 	Allows long words to be able to be broken and wrap onto the next line
 writing-mode 	Specifies whether lines of text are laid out horizontally or vertically
+  
+
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-
-
-
-css Web Fonts
+## CSS Web Fonts
 
 
 The CSS @font-face Rule
@@ -20105,17 +20271,11 @@ See same chapter in W3Schools for CSS Font descriptors (Using a custom font is o
 
 now).
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-
-
-
-
-
-CSS 2D Transforms
-
-
-CSS 2D Transforms
+## CSS 2D Transforms
 
 CSS transforms allow you to move, rotate, scale, and skew elements. You will learn about C SS transform 
 
@@ -20727,11 +20887,10 @@ skewY(angle) 	Defines a 2D skew transformation along the Y-axis
 
 NB: Confirm the browser support before using transform property
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-CSS 3D Transforms
-
-CSS 3D Transforms
+## CSS 3D Transforms
 
 CSS also supports 3D transformations.
 
@@ -20905,10 +21064,11 @@ rotateZ(angle) 	Defines a 3D rotation along the Z-axis
 perspective(n) 	Defines a perspective view for a 3D transformed element
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-
-CSS Transitions
+## CSS Transitions
 
 CSS transitions allows you to change property values smoothly, over a given duration. Always check the 
 
@@ -21237,10 +21397,10 @@ transition-property 	Specifies the name of the CSS property the transition effec
 transition-timing-function 	Specifies the speed curve of the transition effect
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-
-CSS Animations
+## CSS Animations
 
 
 CSS animations enable animations to be added to HTML elements without using Javascript or Flash. Always 
@@ -22059,10 +22219,10 @@ animation-play-state 	Specifies whether the animation is running or paused
 animation-timing-function 	Specifies the speed curve of the animation
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-
-CSS Tooltip
+## CSS TooltipS
 
 This section shows how you can create tooltips for elements on  your webpage
 
@@ -22648,13 +22808,13 @@ completely invisible to visible.</p>
 </html>
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-
+## CSS Style Images
 
 
 CSS Styling Images
-
 
 
 Rounded Images
@@ -23855,8 +24015,11 @@ span.onclick = function() {
 </body>
 </html>
 
-
-
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+  
+## CSS Image Reflection
 
 CSS Image Reflection (confirm browser support for image reflection):
 
@@ -23964,8 +24127,10 @@ img {
 </body>
 </html>
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
+## CSS Object-fit
 
 
 CSS The object-fit Property
@@ -24259,19 +24424,11 @@ CSS Object-* Properties
 The following table lists the CSS object-* properties:
 Property 	Description
 object-fit 	Specifies how an <img> or <video> should be resized to fit its container
-object-position 	Specifies how an <img> or <video> should be positioned with x/y coordinates inside 
+object-position 	Specifies how an <img> or <video> should be positioned with x/y coordinates inside its"own content box"
 
-its "own content box"
-
-
-
-
-
-
-
-
-...........
-
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+## CSS Object-position
 
 CSS The object-position Property
 
@@ -24359,13 +24516,10 @@ object-posititon 	Specifies how an <img> or <video> should be positioned with x/
 
 its "own content box"
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-
-
-
-
-CSS Buttons
+## CSS Buttons
 
 This chapter is about styling buttons in CSS. A basic button styling is shown below:
 
@@ -25283,10 +25437,10 @@ Add a "ripple" effect on click:
 </body>
 </html>
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-.................
-CSS Pagination
+## CSS Pagination
 
 
 This chapter will show you how to create responsive pagination in CSS.
@@ -25857,11 +26011,9 @@ ul.breadcrumb li a {color: green;}
 </html>
 
 
-
-
-
-..........
-
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
 CSS Multiple Columns
 
 
@@ -26231,10 +26383,11 @@ column-span 	Specifies how many columns an element should span across
 column-width 	Specifies a suggested, optimal width for the columns
 columns 	A shorthand property for setting column-width and column-count
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-
-CSS User Interface
+## CSS User Interface
 
 In this chapter you will learn about the following CSS user interface properties (confirm browser support 
 
@@ -26424,10 +26577,10 @@ Property 	Description
 outline-offset 	Adds space between an outline and the edge or border of an element
 resize 	Specifies whether or not an element is resizable by the user
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-
-CSS Variables 
+## CSS Variables
 
 
 css variables - The var() Function::
@@ -27091,10 +27244,10 @@ variable value to lightblue. Resize the browser window to see the effect.</p>
 </body>
 </html>
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-,,,,,,,,,,,,,
-CSS Box Sizing
+## CSS Box Sizing
 
 The CSS box-sizing property allows us to include the padding and border in an element's total width and 
 
@@ -27251,11 +27404,9 @@ box-sizing 	Defines how the width and height of an element are calculated: shoul
 
 and borders, or not
 
-
-
-................
-
-CSS Media Queries
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+## CSS Media Queries
 
 CSS3 Introduced Media Queries (check to confirm browser version support for @media queries)
 
@@ -27405,10 +27556,11 @@ or wider. If the viewport is less than 480 pixels, the menu will be on top of th
 </html>
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-.................
-
+## CSS MQ Examples
 
 CSS Media Queries - Examples
 
@@ -28157,11 +28309,10 @@ Check CSS @media reference to learn more about the use of the media rule. More o
 under CSS RWD.
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-............
-
-CSS Flexbox
+## CSS Flexbox
 
 
 CSS Flexbox Layout Module::
@@ -30346,10 +30497,13 @@ exercitation ullamco.</p>
 </body>
 </html>
 
-
-
-.........
-
+<kbd>return</kbd>[Back to table of contents](#homepage)
+  
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+                                                         ## CSS Responsive
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+## RWD Intro
 
 Responsive Web Design - Introduction
 
@@ -30526,8 +30680,10 @@ parts, the old town and the modern city.</p>
 </body>
 </html>
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
+## RWD Viewport
 
 
 Responsive Web Design - The Viewport
@@ -30607,8 +30763,9 @@ Instead, consider using relative width values, such as width: 100%. Also, be car
 
 positioning values. It may cause the element to fall outside the viewport on small devices.
 
-
-
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+## RWD Grid View
 
 Responsive Web Design - Grid-View
 
@@ -30916,8 +31073,10 @@ Notice that the webpage in the example does not look good when you resize the br
 
 width. In the next chapter you will learn how to fix that.
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
+## RWD Media Queries
 
 Responsive Web Design - Media Queries
 
@@ -31659,10 +31818,9 @@ For a full overview of all the media types and features/expressions, please look
 CSS reference here: https://www.w3schools.com/cssref/css3_pr_mediaquery.asp
 
 
-
-
-.....
-
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+## RWD Images
 
 Responsive Web Design - Images
 
@@ -32082,9 +32240,9 @@ https://www.w3schools.com/cssref/css3_pr_mediaquery.asp .
 
 You should also define an <img> element for browsers that do not support the <picture> element.
 
-
-
-............
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+## RWD Videos
 
 Responsive Web Design - Videos
 
@@ -32316,12 +32474,10 @@ parts, the old town and the modern city.</p>
 </html>
 
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-
-
-...................................
-RWD Frameworks
+## RWD Frameworks
 
 
 There are many free CSS frameworks for Responsive Design. Some of them are:
@@ -32330,15 +32486,18 @@ W3.CSS: https://www.w3schools.com/w3css/default.asp
 Bootstrap (uses HTML, CSS and JQuery): https://www.w3schools.com/bootstrap/bootstrap_ver.asp
  
 
-..............
-RWD Templates
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+## RWD Templates
 
 Check here for useful responsive web design templates: https://www.w3schools.com/css/css_rwd_templates.asp
 
+-- - - - - - - - - - - - - - -  - - - - - - -  - - - - - - - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  
+                                                          ## CSS Grid  
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-.......................................
-
+## Grid Intro
 CSS Grid Layout Module
 
 An example of CSS grid layout module is shown in the html code below:
@@ -32909,10 +33068,10 @@ grid-template-columns 	Specifies the size of the columns, and how many columns i
 grid-template-rows 	Specifies the size of the rows in a grid layout
 row-gap 	Specifies the gap between the grid rows
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
-
-
-CSS Grid Container
+## CSS Grid Container
 
 Grid Container
 
@@ -33695,11 +33854,11 @@ To align content vertically at the end of the container, set the align-content:e
 </body>
 </html>
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 
 
-
-
-CSS Grid Item
+## CSS Grid Item
 
 Child Elements (Items)
 
@@ -34526,11 +34685,13 @@ You can re-arrange the order for certain screen sizes, by using media queries ( 
 </body>
 </html>
 
+<kbd>return</kbd>[Back to table of contents](#homepage)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+.
+.
+.
 
-
-
-
-CSS Templates
+## CSS Templates
 
 You will find four examples of some CSS templates shown below. EAch of the templates were generated using 
 
@@ -34547,25 +34708,7 @@ You are free to modify, save, share, and use them in all your projects.
 
 
 Check Sass tutorial here: https://www.w3schools.com/sass/default.php
-
 Access the full list of CSS references here: https://www.w3schools.com/cssref/default.asp
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-- - - - - - - - - - - - - - - - - -  - - - - - - - - - - - -  - - - - - - -- - - - - - - - -  - - - - - - - - - - -  - - - - - --  - - - - - - - - -- - - - -- - - -- - - - - -- 
-CSS References
+  
+THE END
